@@ -1,0 +1,20 @@
+.global-cases {
+  &__cases {
+    margin-top: 1rem;
+    margin-left: 4rem;
+  }
+
+  &__case {
+    font-size: 1.7rem;
+    font-weight: 700;
+
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+
+    span {
+      font-weight: 400;
+      opacity: 0.9;
+    }
+  }
+}
