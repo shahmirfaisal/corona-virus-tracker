@@ -1,0 +1,35 @@
+.header {
+  background-color: $primary-color;
+  color: white;
+  padding-top: 1.2rem;
+
+  &__heading {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.nav {
+  display: flex;
+  font-size: 1.8rem;
+
+  &__item {
+    color: white;
+    text-decoration: none;
+    padding: 1rem 2rem;
+
+    &--active {
+      background-color: #2f668e;
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: #2f668e;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
