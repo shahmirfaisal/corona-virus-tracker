@@ -10,6 +10,7 @@ const Header = () => {
         <nav className="nav">
           <NavLink
             to="/"
+            exact
             className="nav__link"
             activeClassName="nav__item--active"
           >
