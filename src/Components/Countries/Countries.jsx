@@ -1,13 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { GlobalContext } from "../../Context/GlobalContext";
 import Country from "../Country/Country";
 
 const Countries = () => {
   const { countries, searchCountry } = useContext(GlobalContext);
-
-  useEffect(() => {
-    console.log(countries);
-  });
 
   return (
     <section className="countries">

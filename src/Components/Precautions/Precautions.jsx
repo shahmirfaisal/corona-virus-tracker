@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import { GlobalContext } from "../../Context/GlobalContext";
 
 const Precautions = () => {
+  const { removeFilter } = useContext(GlobalContext);
+
+  useEffect(() => {
+    removeFilter();
+  }, []);
+
   return (
     <article className="precaution">
       <div className="container">
         <h2 className="heading" style={{ marginBottom: "2rem" }}>
-          <i class="fas fa-user-shield"></i> Precautions:
+          <i className="fas fa-user-shield"></i> Precautions:
         </h2>
 
         <section className="precaution__section">

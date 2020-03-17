@@ -32,6 +32,12 @@ const reducer = (state, action) => {
           v.country.toLowerCase().startsWith(action.data.toLowerCase().trim())
         )
       };
+
+    case "REMOVE_FILTER":
+      return {
+        ...state,
+        countries: state.fullCountries
+      };
   }
 
   return state;

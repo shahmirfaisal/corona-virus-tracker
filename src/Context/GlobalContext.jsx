@@ -35,8 +35,14 @@ const GlobalContextProvider = ({ children }) => {
     dispatch({ type: "SEARCH_COUNTRY", data: value });
   };
 
+  const removeFilter = () => {
+    dispatch({ type: "REMOVE_FILTER" });
+  };
+
   return (
-    <GlobalContext.Provider value={{ ...state, fetchData, searchCountry }}>
+    <GlobalContext.Provider
+      value={{ ...state, fetchData, searchCountry, removeFilter }}
+    >
       {children}
     </GlobalContext.Provider>
   );
