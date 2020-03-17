@@ -7,7 +7,7 @@ const GlobalCases = () => {
   return (
     <section className="global-cases">
       <h2 className="heading">
-        <i className="fas fa-globe-americas"></i> Global Cases:
+        <i className="fas fa-globe-americas"></i> Global Info:
       </h2>
 
       {globalCases ? (

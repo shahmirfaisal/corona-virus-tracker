@@ -9,7 +9,8 @@ const reducer = (state, action) => {
     case "ADD_COUNTRIES":
       return {
         ...state,
-        countries: action.data
+        countries: action.data,
+        fullCountries: action.data
       };
 
     case "UPDATE_FETCHING":
@@ -22,6 +23,14 @@ const reducer = (state, action) => {
       return {
         ...state,
         error: action.data
+      };
+
+    case "SEARCH_COUNTRY":
+      return {
+        ...state,
+        countries: state.fullCountries.filter(v =>
+          v.country.toLowerCase().startsWith(action.data.toLowerCase().trim())
+        )
       };
   }
 

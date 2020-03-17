@@ -5,6 +5,7 @@ import reducer from "./reducer";
 const initialState = {
   globalCases: null,
   countries: null,
+  fullCountries: null,
   error: null,
   fetchingData: false
 };
@@ -30,8 +31,12 @@ const GlobalContextProvider = ({ children }) => {
       });
   };
 
+  const searchCountry = value => {
+    dispatch({ type: "SEARCH_COUNTRY", data: value });
+  };
+
   return (
-    <GlobalContext.Provider value={{ ...state, fetchData }}>
+    <GlobalContext.Provider value={{ ...state, fetchData, searchCountry }}>
       {children}
     </GlobalContext.Provider>
   );

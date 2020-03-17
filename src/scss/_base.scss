@@ -10,13 +10,17 @@ html {
   font-size: 62.5%;
 }
 
-body {
+body,
+input {
   font-family: "Nunito", sans-serif;
 }
 
 // Helper Classes
 .container {
   padding: 0 5rem;
+  @media (max-width: 600px) {
+    padding: 0 2rem;
+  }
 }
 .heading {
   font-size: 3rem;

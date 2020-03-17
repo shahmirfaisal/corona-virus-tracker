@@ -1,0 +1,42 @@
+.countries {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    grid-gap: 4rem;
+    margin-top: 4rem;
+    @media (max-width: 450px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.input-group {
+  display: flex;
+  max-width: 30rem;
+  border-radius: 100px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 3rem;
+
+  &__input {
+    padding: 1rem 0 1rem 2rem;
+    border-radius: 100px 0 0 100px;
+    border: 0.5px solid rgb(190, 190, 190);
+    font-size: 1.5rem;
+    flex-grow: 1;
+    outline: none;
+    width: 100%;
+  }
+
+  &__icon {
+    background-color: $primary-color;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    border-radius: 0 100px 100px 0;
+    cursor: pointer;
+    i {
+    }
+  }
+}

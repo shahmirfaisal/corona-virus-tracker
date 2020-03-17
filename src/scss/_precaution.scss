@@ -1,0 +1,17 @@
+.precaution {
+  &__heading {
+    font-size: 2.2rem;
+  }
+
+  &__section {
+    margin-bottom: 4rem;
+  }
+
+  &__paragraph {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    span {
+      font-weight: 700;
+    }
+  }
+}

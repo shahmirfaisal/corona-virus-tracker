@@ -9,10 +9,18 @@ const Home = () => {
 
   let component;
 
+  const style = {
+    error: {
+      textAlign: "center",
+      fontSize: "2rem",
+      marginTop: "3rem"
+    }
+  };
+
   if (fetchingData) {
     component = <Spinner />;
   } else if (error) {
-    component = <p>{error}</p>;
+    component = <p style={style.error}>{error}</p>;
   } else {
     component = (
       <>
